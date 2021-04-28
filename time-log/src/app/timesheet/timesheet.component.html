@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">Timesheet</div>
+  <div class="d-flex justify-content-start">
+    <div class="pr-3">Week</div>
+    <div class="pr-3">{{ currentWeekDates[0] | date: 'dd/MM' }} - {{ currentWeekDates[4] | date: 'dd/MM' }}</div>
+    <button type="button" class="btn btn-primary pr-3">Choose another week</button>
+  </div>
+  <div class="row pt-4">
+    <div class="col-md-2 pb-2">Date</div>
+    <div class="col-md-2 pb-2">Hours worked</div>
+    <div class="col-md-3 pb-2">Project</div>
+    <div class="col-md-3 pb-2">Task</div>
+    <div class="col-md-2 pb-2"></div>
+  </div>
+  <div *ngFor="let day of currentWeekDates" class="row pt-4">
+    <div class="col-md-2 pb-1">{{ day | date: 'dd/MM' }}</div>
+    <div class="col-md-2 pb-1">Hours worked form</div>
+    <div class="col-md-3 pb-1">Project form</div>
+    <div class="col-md-3 pb-1">Task form</div>
+    <div class="col-md-2 pb-1">
+      <button type="button" class="btn btn-primary">Edit</button>
+    </div>
+  </div>
+</div>

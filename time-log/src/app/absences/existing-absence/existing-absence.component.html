@@ -1,0 +1,11 @@
+<h4>Existing</h4>
+
+<table class="table">
+  <tbody>
+  <tr *ngFor="let existingAbsence of existingAbsences">
+    <td>{{ existingAbsence.from | date: 'dd MMM yyyy' }}</td>
+    <td>-></td>
+    <td>{{ existingAbsence.to | date: 'dd MMM yyyy' }}</td>
+  </tr>
+  </tbody>
+</table>

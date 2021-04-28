@@ -1,0 +1,5 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container-fluid">
+  <app-timesheet *ngIf="loadedFeature === 'timesheet'"></app-timesheet>
+  <app-absences *ngIf="loadedFeature === 'absences'"></app-absences>
+</div>
